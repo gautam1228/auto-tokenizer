@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./components/Header";
 import TokenizerSelector from "./components/TokenizerSelector";
 import ModelSelector from "./components/ModelSelector";
@@ -8,6 +7,7 @@ import TextInput from "./components/TextInput";
 import TokensDisplay from "./components/TokensDisplay";
 import TokenStats from "./components/TokenStats";
 import TokenDecoder from "./components/TokenDecoder";
+import Footer from "./components/Footer";
 import { useTokenizer } from "./hooks/useTokenizer";
 
 const App = () => {
@@ -29,7 +29,6 @@ const App = () => {
         setApiKey,
         handleGenerateCustomTokenizer,
         handleTokenize,
-        // Decoder props (simplified)
         showDecoder,
         setShowDecoder,
         tokenInput,
@@ -106,6 +105,8 @@ const App = () => {
                     setTokenInput={setTokenInput}
                     decodeError={decodeError}
                 />
+
+                <Footer />
             </div>
         </div>
     );
